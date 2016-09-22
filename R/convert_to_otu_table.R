@@ -11,6 +11,7 @@ NULL
 #' plasmid sequences
 #'
 #' @param filepath merge table containig samples as columns and taxa as rows.
+#'
 #' @param TAXON The taxonomic level (phylum, class, order, family, species) to create OTU table. It has to be all small letters.
 #'
 #' @return phyloseq otu table
@@ -21,6 +22,11 @@ convert_to_otu_table <- function(filepath, TAXON){
 
   LEVEL <- NULL
 
+  # check for the file existence
+  #
+  if ( !file.exists(filepath) ) {
+    stop(paste("Specified file \"", filepath, "\" doesn't exist!"))
+  }
 
   # read the merge table
   df <- data.table::fread(filepath, sep = "\t", header = T)

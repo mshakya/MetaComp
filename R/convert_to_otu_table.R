@@ -3,16 +3,17 @@
 
 NULL
 
-#' Extracts phyloseq format otu table from merged table for given taxonomic level
-#' otu here corresponds to the taxonomic level.
+#' Create Phyloseq format otu table
 #'
-#' This implementation is built upon phyloseq. We recommend not to use this for strain
+#' Synthesize phyloseq format otu table from merged table for given taxonomic level.
+#' OTU here corresponds to the taxonomic level. This implementation is built upon phyloseq. We recommend not to use this for strain
 #' level classification as creation of taxa_table doesn't work with strain level or
-#' plasmid sequences
+#' plasmid sequences.
 #'
-#' @param filepath merge table containig samples as columns and taxa as rows.
+#' @param filepath to merge table containig samples as columns and taxa as rows.
 #'
-#' @param TAXON The taxonomic level (phylum, class, order, family, species) to create OTU table. It has to be all small letters.
+#' @param TAXON A taxonomic level (phylum, class, order, family, species) to create OTU table.
+#'        It has to be all small letters.
 #'
 #' @return phyloseq otu table
 #'

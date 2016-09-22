@@ -16,6 +16,8 @@ NULL
 #'         taxonomically anchored sequences from the sample.
 #'
 #' @export
+#'
+
 load_bwa_assignment <- function(filepath) {
 
   levels <- TAXA <- LEVEL <- COUNT <- ABUNDANCE <- NULL
